@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hamburger Sidebar Menu</title>
+<link rel="stylesheet" href="search.css">
+</head>
+<body>
+
+  <div class="logo">
+    <p>Flipkart</p>
+    <img class="img" src="Flipkart.png" alt="Flipkart Logo">
+
+    <div class="detail">
+    <div class="search-container">
+        <input type="text" id="search-input" placeholder="Search for products, brands and more">
+        <button id="search-button"><span>&#128269;</span></button>
+    </div>
+
+    <div class="cart-container">
+        <button id="cart-button" onclick="toggleCartModal()"><span>&#128722;</span> Cart</button>
+    </div>
+</div>
+  </div>
+
+  <div class="sidebar">
+      <button class="hamburger" onclick="toggleSidebar()">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+      </button>
+      <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Login</a></li>
+          <li><a href="#">Dashboard</a></li>
+          <li><a href="#">Sign Up</a></li>
+          <li><a href="#">Contact</a></li>
+          <li><a href="#">Services</a></li>
+      </ul>
+  </div>
+
+  <div class="content">
+      <div class="products">
+          <div class="product">
+              <img src="side.png" alt="Product 1">
+              <p>Product 1</p>
+              <button onclick="addToCart(1, 'Product 1')">Add to Cart</button>
+          </div>
+          <div class="product">
+              <img src="side.png" alt="Product 2">
+              <p>Product 2</p>
+              <button onclick="addToCart(2, 'Product 2')">Add to Cart</button>
+          </div>
+          <div class="product">
+              <img src="side.png" alt="Product 3">
+              <p>Product 3</p>
+              <button onclick="addToCart(3, 'Product 3')">Add to Cart</button>
+          </div>
+          <div class="product">
+            <img src="side.png" alt="Product 4">
+            <p>Product 4</p>
+            <button onclick="addToCart(4, 'Product 4')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="side.png" alt="Product 5">
+            <p>Product 5</p>
+            <button onclick="addToCart(5, 'Product 5')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="side.png" alt="Product 6">
+            <p>Product 6</p>
+            <button onclick="addToCart(6, 'Product 6')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="side.png" alt="Product 7">
+            <p>Product 7</p>
+            <button onclick="addToCart(7, 'Product 7')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="side.png" alt="Product 8">
+            <p>Product 8</p>
+            <button onclick="addToCart(8, 'Product 8')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="side.png" alt="Product 9">
+            <p>Product 9</p>
+            <button onclick="addToCart(9, 'Product 9')">Add to Cart</button>
+        </div>
+        <div class="product">
+            <img src="side.png" alt="Product 10">
+            <p>Product 10</p>
+            <button onclick="addToCart(10, 'Product 10')">Add to Cart</button>
+        </div>
+      </div>
+  </div>
+
+  <div id="cart-modal" class="cart-modal">
+    <div class="cart-modal-content">
+      <span class="close" onclick="toggleCartModal()">&times;</span>
+      <h2>Your Cart</h2>
+      <div id="cart-items"></div>
+    </div>
+  </div>
+
+<script src="search.js"></script>
+</body>
+</html>
