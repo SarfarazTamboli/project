@@ -1,18 +1,11 @@
-function toggleSidebar() {
-    var sidebar = document.querySelector('.sidebar');
-    sidebar.classList.toggle('open');
-}
-
-
-
 let cart = [];
 
-function addToCart(id, name) {
+function addToCart(id, name, image) {
   const product = cart.find(item => item.id === id);
   if (product) {
     product.quantity++;
   } else {
-    cart.push({ id, name, quantity: 1 });
+    cart.push({ id, name, image, quantity: 1 });
   }
   updateCartCount();
 }
@@ -38,6 +31,7 @@ function displayCartItems() {
     const cartItem = document.createElement('div');
     cartItem.className = 'cart-item';
     cartItem.innerHTML = `
+      <img src="${item.image}" alt="${item.name}" style="width: 50px; height: auto;">
       <p>${item.name}</p>
       <p>Quantity: <button onclick="decrementQuantity(${item.id})">-</button> ${item.quantity} <button onclick="incrementQuantity(${item.id})">+</button></p>
     `;
@@ -61,4 +55,11 @@ function decrementQuantity(id) {
     displayCartItems();
     updateCartCount();
   }
+}
+
+
+
+function toggleSidebar() {
+  var sidebar = document.querySelector('.sidebar');
+  sidebar.classList.toggle('open');
 }
