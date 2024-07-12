@@ -222,3 +222,16 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+
+
+.cart-item img {
+  width: 50px;
+  height: auto;
+  margin-right: 10px;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
